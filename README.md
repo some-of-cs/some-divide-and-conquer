@@ -23,7 +23,7 @@
 [![Agency Agents](https://img.shields.io/badge/Agency%20Agents-283%20Bundled%20(18%20Divisions)-22C55E.svg)](https://github.com/msitarzewski/agency-agents)
 [![Security Audit Skill](https://img.shields.io/badge/Security%20Audit-cloudflare%2Fsecurity--audit--skill-F38020.svg)](https://github.com/cloudflare/security-audit-skill)
 [![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
-[![Sponsor](https://img.shields.io/badge/Sponsor-%E2%99%A5-ff69b4.svg)](https://github.com/sponsors/some-of-cs)
+[![Sponsor](https://img.shields.io/badge/Sponsor-%E2%99%A5-ff69b4.svg)](https://github.com/sponsors/maheraladdin)
 
 [Overview](#why-some-divide-and-conquer) •
 [Token & Model Guidance](#token-consumption--gemini-flash-family-optimization) •
@@ -394,7 +394,7 @@ some-divide-and-conquer/
 
 <div align="center">
 
-[![Become a Sponsor](https://img.shields.io/badge/Become%20a%20Sponsor-%E2%99%A5-ea4aaa?style=for-the-badge)](https://github.com/sponsors/some-of-cs)
+[![Become a Sponsor](https://img.shields.io/badge/Become%20a%20Sponsor-%E2%99%A5-ea4aaa?style=for-the-badge)](https://github.com/sponsors/maheraladdin)
 
 </div>
 
