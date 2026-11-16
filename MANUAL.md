@@ -14,7 +14,7 @@
 **The Official How-to-Use Guide for Google Antigravity, Claude Code & OpenAI Codex (`some-divide-and-conquer` by Some(CS))**
 
 [![Some(CS) Org](https://img.shields.io/badge/Org-Some(CS)-0F2942.svg)](https://github.com/some-of-cs)
-[![Version](https://img.shields.io/badge/version-1.1.0-blue.svg)](#)
+[![Version](https://img.shields.io/badge/version-1.2.0-blue.svg)](#)
 [![Antigravity](https://img.shields.io/badge/Antigravity-Supported-4285F4.svg)](#google-antigravity)
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-Supported-D97757.svg)](#claude-code)
 [![Codex](https://img.shields.io/badge/OpenAI%20Codex-Supported-10A37F.svg)](#openai-codex-cli)

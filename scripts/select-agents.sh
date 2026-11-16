@@ -76,7 +76,7 @@ write_field_profile() {
   "field": "$canon",
   "requested_field": "$field_arg",
   "divisions_csv": "$divs",
-  "registry_version": "1.1.0"
+  "registry_version": "1.2.0"
 }
 EOF
   fi

@@ -2,7 +2,7 @@
   "name": "some-divide-and-conquer-marketplace",
   "interface": {
     "displayName": "Some Divide-and-Conquer Marketplace",
-    "description": "Official OpenAI Codex & cross-agent marketplace catalog for some-divide-and-conquer (v1.1.0).",
+    "description": "Official OpenAI Codex & cross-agent marketplace catalog for some-divide-and-conquer (v1.2.0).",
     "logoURL": "./assets/logo.svg",
     "brandLogoURL": "./assets/some-of-cs-logo.png"
   },

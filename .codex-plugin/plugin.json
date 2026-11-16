@@ -1,6 +1,6 @@
 {
   "name": "some-divide-and-conquer",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Autonomous Divide-and-Conquer multi-agent engineering & domain delivery plugin for OpenAI Codex CLI, Google Antigravity, and Claude Code. Transforms monolithic specifications into parallel Modules, User Stories, and non-blocking Implementation Units inside isolated Git worktrees across 8 industry --field presets.",
   "logo": "./assets/logo.svg",
   "orgLogo": "./assets/some-of-cs-logo.png",
