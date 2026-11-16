@@ -1,5 +1,5 @@
 ---
-description: Decompose a monolithic specification, PRD, RFC, financial model, campaign brief, or research document into bounded Modules, User Stories, dynamically sized Implementation Units (1..K), an Architecture Roadmap, and per-module User Story Spec Kit documents (docs/user-stories/module-M/us-M.S.0.md).
+description: Decompose a monolithic specification, PRD, RFC, financial model, campaign brief, or research document into bounded Modules, User Stories, dynamically sized Implementation Units (1..K), an Architecture Roadmap, per-module README.md files with copy-paste Module Execution Prompts, and per-module User Story Spec Kit documents (docs/user-stories/module-M/us-M.S.0.md).
 argument-hint: <path-to-spec-doc> [--field <software|product|marketing|finance|research|healthcare|game-dev|gis>]
 ---
 
@@ -10,11 +10,12 @@ Specification document to decompose (and optional `--field` preset): `$ARGUMENTS
 1. Load and follow the `spec-decomposition` skill (`skills/spec-decomposition/SKILL.md`), `security-audit` skill (`skills/security-audit/SKILL.md`), and `profiles/fields.json` (or `.agents/field-profile.json`).
 2. Verify `git` and `gh` exist via `${CLAUDE_PLUGIN_ROOT:-${ANTIGRAVITY_PLUGIN_ROOT:-.}}/scripts/preflight-check.sh`. If `--field <FIELD>` is provided, configure the field profile via `${CLAUDE_PLUGIN_ROOT:-${ANTIGRAVITY_PLUGIN_ROOT:-.}}/scripts/select-agents.sh --field <FIELD> --target .`.
 3. Read `$ARGUMENTS` and partition it into:
-   - **Level 1: Modules (`module-1..M`)** — Bounded architectural contexts or workstreams.
+   - **Level 1: Modules (`module-1..M`)** — Bounded architectural contexts or workstreams, with an explicit **Strict Merge Order to `main`**.
    - **Level 2: User Stories (`us-M.1.0..us-M.S.0`)** — Cohesive feature or domain deliverables.
    - **Level 3: Implementation Units (`unit-1..K`)** — Calculate the weighted **Story Decomposition Score ($S_{\text{story}} = 0.35 D_1 + 0.25 D_2 + 0.20 D_3 + 0.20 D_4$)** using the active field's $D_1..D_4$ metrics to determine the exact unit count $K \in [1, N]$.
-4. Generate the two required documentation deliverables:
+4. Generate the three required documentation deliverables:
    - **Architecture Roadmap**: `docs/architecture/DECOMPOSITION_ROADMAP.md`
+   - **Per-Module `README.md` with Copy-Paste Execution Prompt**: `docs/user-stories/module-M-<slug>/README.md` for every module, containing the module overview, story/unit index table, and a self-contained **Copy-Paste Module Execution Prompt** (Section 4.1 of `skills/spec-decomposition/SKILL.md`) with exact agent counts, specialist agent assignments, skills, anti-regression guardrails, Wave 1–4 execution steps, and the strict merge-order constraint to `main`.
    - **Per-Module User Story Spec Kit Suite**: `docs/user-stories/module-M-<slug>/us-M.S.0-<story-slug>.md` for every user story under its module folder, containing all 6 mandatory sections:
      1. **Spec Kit Specifications** (`1.1 User Story Narrative` with `1.1.1 Preconditions` & `1.1.2 Postconditions`, `1.2 Acceptance Criteria (Gherkin Scenarios)`, `1.3 Test Cases & Traceability Matrix`)
      2. **Technical Implementation Plan** (`2.1 Domain Invariants & Storage Schema`, and either `2.2 Activity Diagram` or `2.2 Sequence Diagram`)

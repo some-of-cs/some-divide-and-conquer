@@ -5,6 +5,7 @@
 ```text
 Monolithic Specification / Research Doc / PRD / Model Brief
   └── Module 1..M (Bounded Contexts / Workstreams / Subsystems)
+        ├── docs/user-stories/module-M-<slug>/README.md (Overview, Story Index & Copy-Paste Module Execution Prompt)
         └── User Story M.1..M.S (Cohesive Feature or Domain Deliverables)
               └── Implementation Units 1..K (Parallel, Non-Blocking Vertical Slices)
 ```
@@ -45,10 +46,17 @@ $$S_{\text{story}} = 0.35 D_1 + 0.25 D_2 + 0.20 D_3 + 0.20 D_4$$
 
 ## 4. Required Decomposition Deliverables (`docs/architecture/` & `docs/user-stories/`)
 
-Besides `docs/architecture/DECOMPOSITION_ROADMAP.md`, decomposition MUST generate `docs/user-stories/module-M-<slug>/us-M.S.0-<story-slug>.md` for every User Story under its Module folder, containing:
-1. **Spec Kit Specifications** (`1.1 User Story Narrative`, `1.1.1 Preconditions`, `1.1.2 Postconditions`, `1.2 Acceptance Criteria (Gherkin Scenarios)`, `1.3 Test Cases & Traceability Matrix`)
-2. **Technical Implementation Plan** (`2.1 Domain Invariants & Storage Schema`, `2.2 Activity Diagram` or `2.2 Sequence Diagram` — choose the single header that best fits the story)
-3. **Expected Folder Architecture at the Project** (disjoint unit file ownership tree)
-4. **Implementation Units in Detail & Specialist Agent Assignment** (`4.1 Story Decomposition Score & Unit Count`, `4.2 Detailed Unit Specifications`, `4.3 Best-Fit Specialist Agents per Unit`, `4.4 Parallel Execution & Zero-Blocking Contract Seeding Plan`)
-5. **Security Gateway (Powered by `security-audit` Skill)** (`5.1 Trust Boundaries & Security Actors`, `5.2 Threat Modeling & Abuse Matrix (STRIDE / OWASP ASVS)`, `5.3 Cryptography & Global Data Protection Controls` for worldwide legal compliance, `5.4 Automated Security Verification Checklist`, `5.5 Security Gateway (Gate G2) Sign-Off Checklist`)
-6. **Validation Gates & Acceptance Sign-Off** (Gates G0, G1, G2, G-Complexity, G-Docs, and Gate G-Review sign-off)
+Every `spec-decomposition` run MUST generate three synchronized outputs:
+1. **Master Architecture Roadmap (`docs/architecture/DECOMPOSITION_ROADMAP.md`)**: Including the module dependency DAG, total story/unit counts, and the **Strict Cross-Module Merge Order to `main`**.
+2. **Per-Module `README.md` with Copy-Paste Execution Prompt (`docs/user-stories/module-M-<slug>/README.md`)**: Containing the module overview, story/unit index table, and a self-contained **Copy-Paste Module Execution Prompt** (following Section 4.1 of `skills/spec-decomposition/SKILL.md`) specifying:
+   - Architecture, scope, and feature/deliverable contracts
+   - Exact agent count and roster across Shared Infrastructure, Tier 1 (Module Leader + Reviewer), Tier 2 (Story Leaders + Testers + Reviewers), Tier 3 (Unit Implementers + Reviewers), and on-demand `patch-implementer`
+   - Mandatory anti-regression rules (pre-scaffolded `mod.rs`/index stubs, independent subagent review before merge, plain UTF-8 commits, static lookup slices for `CC <= 6`, runnable & `compile_fail` doc-tests, and memory-safe sequential verification)
+   - Step-by-step Wave 1–4 execution workflow and the **strict merge-order constraint to `main`**
+3. **Per-Story Spec Kit Documents (`docs/user-stories/module-M-<slug>/us-M.S.0-<story-slug>.md`)**: Containing all 6 mandatory sections:
+   - **Spec Kit Specifications** (`1.1 User Story Narrative`, `1.1.1 Preconditions`, `1.1.2 Postconditions`, `1.2 Acceptance Criteria (Gherkin Scenarios)`, `1.3 Test Cases & Traceability Matrix`)
+   - **Technical Implementation Plan** (`2.1 Domain Invariants & Storage Schema`, `2.2 Activity Diagram` or `2.2 Sequence Diagram` — choose the single header that best fits the story)
+   - **Expected Folder Architecture at the Project** (disjoint unit file ownership tree)
+   - **Implementation Units in Detail & Specialist Agent Assignment** (`4.1 Story Decomposition Score & Unit Count`, `4.2 Detailed Unit Specifications`, `4.3 Best-Fit Specialist Agents per Unit`, `4.4 Parallel Execution & Zero-Blocking Contract Seeding Plan`)
+   - **Security Gateway (Powered by `security-audit` Skill)** (`5.1 Trust Boundaries & Security Actors`, `5.2 Threat Modeling & Abuse Matrix (STRIDE / OWASP ASVS)`, `5.3 Cryptography & Global Data Protection Controls` for worldwide legal compliance, `5.4 Automated Security Verification Checklist`, `5.5 Security Gateway (Gate G2) Sign-Off Checklist`)
+   - **Validation Gates & Acceptance Sign-Off** (Gates G0, G1, G2, G-Complexity, G-Docs, and Gate G-Review sign-off)
