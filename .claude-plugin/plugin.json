@@ -1,7 +1,7 @@
 {
   "name": "some-divide-and-conquer",
   "displayName": "Some Divide-and-Conquer",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Autonomous Divide-and-Conquer Software Engineering Plugin for Google Antigravity, Claude Code, and OpenAI Codex. Transforms monolithic specifications into parallel Modules, User Stories, and non-blocking Implementation Units inside isolated Git worktrees, governed by multi-council code review, patch-implementer self-correction loops, GitHub Projects Kanban tracking, in-PR conversation reporting, cloudflare/security-audit-skill, and 283 specialist agents from msitarzewski/agency-agents.",
   "logo": "./assets/logo.svg",
   "icon": "./assets/plugin-logo.svg",

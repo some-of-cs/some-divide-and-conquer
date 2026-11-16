@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.1.0",
+  "schema_version": "1.2.0",
   "default_field": "software",
   "description": "Central field-targeting registry for some-divide-and-conquer (--field <FIELD_PROFILE>). Maps industry domains to default msitarzewski/agency-agents divisions, D1..D4 decomposition sizing rubrics, and 6-gate reviewing council criteria.",
   "fields": {

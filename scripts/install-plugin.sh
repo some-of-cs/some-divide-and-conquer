@@ -146,7 +146,7 @@ else
   "field": "$CANONICAL_FIELD",
   "requested_field": "$FIELD_PROFILE",
   "divisions_csv": "$DIVISIONS_CSV",
-  "registry_version": "1.1.0"
+  "registry_version": "1.2.0"
 }
 EOF
 fi

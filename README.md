@@ -18,7 +18,7 @@
 [![Antigravity Plugin](https://img.shields.io/badge/Antigravity-Marketplace%20Plugin-4285F4.svg)](plugin.json)
 [![Claude Code Plugin](https://img.shields.io/badge/Claude%20Code-Marketplace%20Plugin-D97757.svg)](.claude-plugin/marketplace.json)
 [![OpenAI Codex Plugin](https://img.shields.io/badge/OpenAI%20Codex-CLI%20%26%20Skills-10A37F.svg)](codex.json)
-[![Version](https://img.shields.io/badge/version-1.1.0-blue.svg)](plugin.json)
+[![Version](https://img.shields.io/badge/version-1.2.0-blue.svg)](plugin.json)
 [![Model Family](https://img.shields.io/badge/Optimized%20For-Gemini%20Flash%20Family-8E75B2.svg)](#token-consumption--gemini-flash-family-optimization)
 [![Agency Agents](https://img.shields.io/badge/Agency%20Agents-283%20Bundled%20(18%20Divisions)-22C55E.svg)](https://github.com/msitarzewski/agency-agents)
 [![Security Audit Skill](https://img.shields.io/badge/Security%20Audit-cloudflare%2Fsecurity--audit--skill-F38020.svg)](https://github.com/cloudflare/security-audit-skill)
